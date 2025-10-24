@@ -40,7 +40,7 @@
   </nav>
   <section id="profile">
     <div class="section__pic-container">
-      <img src="./assets/profile-picture.png" alt="John Doe profile picture" />
+      <img src="./assets/profile-picture.png" alt="profile-picture" />
     </div>
     <div class="section__text">
       <h3 class="section__text__p1">Hello 🖐️, I'm</h3>
@@ -222,7 +222,19 @@
         <p><a href="https://www.linkedin.com/in/rezkydesyafa/">rezkydesyafa</a></p>
       </div>
     </div>
+    <div class="input-container">
+      <h3 class="input-text-h3">Feel free to reach out to me for any questions or opportunities!</h3>
+      <div class="inputan">
+        <input type="email" id="email" class="input-name" placeholder="email" />
+        <textarea class="input-name" id="pesan" name="pesan" rows="3" cols="40" placeholder="message.."></textarea>
+      </div>
+
+      <!-- Area pesan error -->
+      <div id="error-message"></div>
+      <button id="btnNama" class="btn-message btn-color-1">Send</button>
+    </div>
   </section>
+
   <footer>
     <nav>
       <div class="nav-links-container">
@@ -235,6 +247,21 @@
     </nav>
     <p class="footer-copyright">Copyright &#169; 2025 Rezky desyafa. All Rights Reserved.</p>
   </footer>
+  <!-- Notifikasi Pop-up Modern -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <div class="popup-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(4,4,4,1)">
+          <path
+            d="M1.94607 9.31543C1.42353 9.14125 1.4194 8.86022 1.95682 8.68108L21.043 2.31901C21.5715 2.14285 21.8746 2.43866 21.7265 2.95694L16.2733 22.0432C16.1223 22.5716 15.8177 22.59 15.5944 22.0876L11.9999 14L17.9999 6.00005L9.99992 12L1.94607 9.31543Z">
+          </path>
+        </svg></div>
+      <h2>Message Sent Successfully!</h2>
+      <p>Thank you for contacting me, I will reply to your message as soon as possible.`</p>
+      <button id="closePopup" class="btn btn-color-1">Close</button>
+    </div>
+  </div>
+
+  <script src="jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
   <script src="script.js"></script>
 </body>

@@ -58,6 +58,12 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
+svg {
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+}
+
 .logo {
   font-size: 1.4rem;
   font-weight: 500;
@@ -419,6 +425,10 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  padding-bottom: 32px;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
 }
 
 .contact-info-upper-container {
@@ -462,4 +472,149 @@ footer {
 footer p {
   text-align: center;
   font-size: 1rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  /* background-color: #1e90ff; */
+  border-radius: 2rem;
+  /* border: rgb(53, 53, 53) 0.1rem solid; */
+  border-color: rgb(163, 163, 163);
+  /* width: 640px; */
+}
+
+.input-name {
+  /* background-color: red; */
+  /* margin-top: 40px; */
+
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  border: 2px solid rgb(53, 53, 53) !important;
+  border-radius: 12px !important;
+  color: #333;
+  padding: 10px;
+  width: 400px;
+}
+.input-name:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+}
+
+.input-text-h3 {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(61, 61, 61);
+
+  /* color: red; */
+}
+
+.btn-message {
+  /* color: red; */
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.inputan {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ===== Modern Pop-up Style ===== */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 420px;
+  width: 90%;
+  transform: translateY(-20px);
+  animation: slideUp 0.4s ease forwards;
+}
+
+.popup-icon {
+  font-size: 50px;
+  color: #4caf50;
+  margin-bottom: 15px;
+}
+
+.popup-content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.popup-content p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.popup-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #4a00e0, #8e2de2);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.popup-btn:hover {
+  background: linear-gradient(135deg, #6b2de2, #9d5cf0);
+  transform: scale(1.05);
+}
+
+/* Pesan validasi */
+#error-message {
+  margin-top: 8px;
+  font-size: 14px;
+  color: red;
+  text-align: center;
+  min-height: 20px;
+}
+
+/* Animasi lembut */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
