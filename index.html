@@ -10,16 +10,23 @@
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 
 <body>
   <nav id="desktop-nav">
     <div class="logo">Rezky Desyafa</div>
+
     <div>
       <ul class="nav-links">
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        <div class="theme-toggle">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </div>
+
       </ul>
     </div>
   </nav>
@@ -59,12 +66,19 @@
           Contact Info
         </button>
       </div>
+      <!-- 🌐 Social Media Icons (Font Awesome Version) -->
       <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-          onclick="location.href='https://www.linkedin.com/in/rezkydesyafa/'" />
-        <img src="./assets/github.png" alt="My Github profile" class="icon"
-          onclick="location.href='https://github.com/Rezkydesyafa'" />
+        <a href="https://www.linkedin.com/in/rezkydesyafa/" target="_blank" class="social-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Rezkydesyafa" target="_blank" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:rezkydesyafa@gmail.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
       </div>
+
     </div>
   </section>
   <section id="experience">
@@ -76,42 +90,42 @@
           <h2 class="experience-sub-title">Frontend Development</h2>
           <div class="article-container">
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <i class="fas fa-check-circle experience-icon"></i>
               <div>
                 <h3>HTML& CSS</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <i class="fas fa-check-circle experience-icon"></i>
               <div>
                 <h3>TailwindCSS</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <i class="fas fa-check-circle experience-icon"></i>
               <div>
                 <h3>React</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <i class="fas fa-check-circle experience-icon"></i>
               <div>
                 <h3>JavaScript</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <i class="fas fa-check-circle experience-icon"></i>
               <div>
                 <h3>TypeScript</h3>
                 <p>Basic</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <i class="fas fa-check-circle experience-icon"></i>
               <div>
                 <h3>Figma</h3>
                 <p>Experienced</p>
@@ -124,28 +138,28 @@
           <h2 class="experience-sub-title">Backend Development</h2>
           <div class="article-container">
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <i class="fas fa-check-circle experience-icon"></i>
               <div>
                 <h3>PostgreSQL</h3>
                 <p>Basic</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <i class="fas fa-check-circle experience-icon"></i>
               <div>
                 <h3>Node JS</h3>
                 <p>Intermediate</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <i class="fas fa-check-circle experience-icon"></i>
               <div>
                 <h3>Express JS</h3>
                 <p>Intermediate</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <i class="fas fa-check-circle experience-icon"></i>
               <div>
                 <h3>Git</h3>
                 <p>Intermediate</p>
@@ -155,7 +169,8 @@
         </div>
       </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+
+    <i class="fa-solid fa-angles-down arrow" onclick="location.href='./#projects'"></i>
   </section>
   <section id="projects">
     <p class="section__text__p1">Browse My Recent</p>
@@ -207,18 +222,21 @@
         </div>
       </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    <!-- <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" /> -->
+    <i class="fa-solid fa-angles-down arrow" onclick="location.href='./#contact'"></i>
+
+
   </section>
   <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <i class="fas fa-envelope"></i>
         <p><a href="mailto:rezkydesyafa@gmail.com">rezkydesyafa@gmail.com</a></p>
       </div>
       <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <i class="fab fa-linkedin"></i>
         <p><a href="https://www.linkedin.com/in/rezkydesyafa/">rezkydesyafa</a></p>
       </div>
     </div>
@@ -233,7 +251,11 @@
       <div id="error-message"></div>
       <button id="btnNama" class="btn-message btn-color-1">Send</button>
     </div>
+
   </section>
+  <div>
+
+  </div>
 
   <footer>
     <nav>

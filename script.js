@@ -66,3 +66,43 @@ $(document).ready(function () {
     }
   });
 });
+
+// ===================== 🌗 DARK MODE TOGGLE (jQuery) =====================
+$(document).ready(function () {
+  const $body = $('body');
+  const $icon = $('#theme-icon');
+
+  // 🧩 1. Cek preferensi pengguna di localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    $body.addClass('dark-mode');
+    $icon.removeClass('fa-moon').addClass('fa-sun');
+  }
+
+  // 🧩 2. Event saat tombol toggle diklik
+  $('.theme-toggle').on('click', function () {
+    // Efek animasi jQuery
+    $icon.fadeOut(200, function () {
+      $body.toggleClass('dark-mode');
+
+      // Ubah ikon dengan efek rotate + scale
+      if ($body.hasClass('dark-mode')) {
+        $icon.removeClass('fa-moon').addClass('fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        $icon.removeClass('fa-sun').addClass('fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+
+      // Tambahkan efek animasi CSS
+      $icon.css('animation', 'rotateScale 0.5s ease');
+
+      // Fade in ikon kembali setelah ganti
+      $icon.fadeIn(200);
+
+      // Hapus animasi agar bisa digunakan lagi nanti
+      setTimeout(() => {
+        $icon.css('animation', '');
+      }, 600);
+    });
+  });
+});
