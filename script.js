@@ -16,6 +16,7 @@ var typed = new Typed('.typing-text', {
   loop: true, // ini yang benar
   // smartBackspace: true,
 });
+
 $(document).ready(function () {
   $('#btnNama').click(function () {
     const email = ($('#email').val() || '').trim();
@@ -25,7 +26,7 @@ $(document).ready(function () {
     // Reset pesan error setiap klik
     $('#error-message').text('');
 
-    // 🔸 Validasi kosong
+    // Validasi kosong
     if (!email || !pesan) {
       $('#error-message').text('Email dan pesan tidak boleh kosong.');
       if (!email) $('#email').css('border', '2px solid red');
@@ -33,7 +34,7 @@ $(document).ready(function () {
       return;
     }
 
-    // 🔸 Validasi format email
+    // Validasi format email
     if (!emailPattern.test(email)) {
       $('#error-message').text(
         'Format email tidak valid. Contoh: nama@gmail.com'
@@ -42,24 +43,24 @@ $(document).ready(function () {
       return;
     }
 
-    // 🔹 Reset border dan hapus pesan error
+    //Reset border dan hapus pesan error
     $('#email, #pesan').css('border', '1px solid #ccc');
     $('#error-message').text('');
 
-    // 🔹 Tampilkan notifikasi pop-up
+    // Tampilkan notifikasi pop-up
     $('#popup').fadeIn(250).css('display', 'flex');
 
-    // 🔹 Kosongkan input
+    // Kosongkan input
     $('#email').val('');
     $('#pesan').val('');
   });
 
-  // 🔹 Tombol menutup pop-up
+  // Tombol menutup pop-up
   $('#closePopup').click(function () {
     $('#popup').fadeOut(250);
   });
 
-  // 🔹 Klik di luar pop-up
+  // Klik di luar pop-up
   $(document).on('click', function (e) {
     if ($(e.target).is('#popup')) {
       $('#popup').fadeOut(250);
@@ -67,18 +68,18 @@ $(document).ready(function () {
   });
 });
 
-// ===================== 🌗 DARK MODE TOGGLE (jQuery) =====================
+// DARK MODE TOGGLE
 $(document).ready(function () {
   const $body = $('body');
   const $icon = $('#theme-icon');
 
-  // 🧩 1. Cek preferensi pengguna di localStorage
+  // Cek preferensi pengguna di localStorage
   if (localStorage.getItem('theme') === 'dark') {
     $body.addClass('dark-mode');
     $icon.removeClass('fa-moon').addClass('fa-sun');
   }
 
-  // 🧩 2. Event saat tombol toggle diklik
+  //Event saat tombol toggle diklik
   $('.theme-toggle').on('click', function () {
     // Efek animasi jQuery
     $icon.fadeOut(200, function () {
